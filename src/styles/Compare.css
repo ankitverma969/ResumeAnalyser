@@ -1,0 +1,393 @@
+.compare-shell {
+  min-height: 100vh;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.compare-main {
+  position: relative;
+  overflow: hidden;
+  padding: 34px 16px 38px;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(80px);
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.blob-a {
+  width: 420px;
+  height: 420px;
+  top: -40px;
+  left: 14%;
+  background: #6366f1;
+}
+
+.blob-b {
+  width: 420px;
+  height: 420px;
+  top: 20px;
+  right: 12%;
+  background: #8b5cf6;
+}
+
+.blob-c {
+  width: 340px;
+  height: 340px;
+  bottom: -120px;
+  left: 42%;
+  background: #d946ef;
+}
+
+.compare-hero {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  margin: 30px auto 24px;
+}
+
+.compare-hero h1 {
+  margin: 0 0 12px;
+  color: #0f172a;
+  font-size: 74px;
+  line-height: 1.08;
+  font-weight: 800;
+}
+
+.compare-hero p {
+  margin: 0 auto;
+  max-width: 760px;
+  color: #5f6b7d;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.compare-card {
+  position: relative;
+  z-index: 2;
+  max-width: 1080px;
+  margin: 0 auto;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.09);
+  backdrop-filter: blur(10px);
+  padding: 28px;
+}
+
+.selectors-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.selector-block label {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.select-wrap {
+  position: relative;
+}
+
+.select-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  display: grid;
+  place-items: center;
+  background: #e8eaf3;
+  color: #6366f1;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.select-wrap select {
+  width: 100%;
+  border: 1px solid #d4dbe7;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #1f2937;
+  font-family: inherit;
+  font-size: 15px;
+  padding: 14px 12px 14px 44px;
+  appearance: none;
+}
+
+.select-wrap select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.upload-note {
+  margin: 10px 0 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.upload-note::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.upload-note.green-dot::before {
+  background: #22c55e;
+}
+
+.upload-note.blue-dot::before {
+  background: #3b82f6;
+}
+
+.vs-badge {
+  width: 68px;
+  height: 68px;
+  border-radius: 999px;
+  background: #f3e8ff;
+  border: 1px solid #ece5f8;
+  color: #8b5cf6;
+  display: grid;
+  place-items: center;
+  font-size: 42px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.compare-btn {
+  width: 100%;
+  margin-top: 26px;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  background-image:
+    linear-gradient(#ffffff, #ffffff),
+    linear-gradient(90deg, #6366f1, #8b5cf6, #d946ef);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  color: #4f46e5;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 13px 18px;
+  cursor: pointer;
+}
+
+.compare-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.processing-note {
+  text-align: center;
+  margin: 14px 0 0;
+  color: #9aa4b2;
+  font-size: 13px;
+}
+
+.processing-note span {
+  color: #475569;
+  font-weight: 600;
+}
+
+.compare-results {
+  position: relative;
+  z-index: 2;
+  max-width: 1080px;
+  margin: 18px auto 0;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(8px);
+  padding: 24px;
+}
+
+.result-top {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.score-card {
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #dce3ef;
+  padding: 16px;
+}
+
+.score-card h3 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.score-card strong {
+  font-size: 42px;
+}
+
+.score-card strong.good {
+  color: #16a34a;
+}
+
+.score-card strong.mid {
+  color: #d97706;
+}
+
+.score-card strong.low {
+  color: #dc2626;
+}
+
+.section-results h2,
+.insights-box h2 {
+  margin: 10px 0 12px;
+  font-size: 20px;
+  color: #0f172a;
+}
+
+.section-list {
+  display: grid;
+  gap: 10px;
+}
+
+.section-item {
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #dce3ef;
+  padding: 14px;
+}
+
+.section-item h4 {
+  margin: 0 0 8px;
+  text-transform: capitalize;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 44px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.bar-track {
+  height: 8px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: inherit;
+}
+
+.bar-fill.indigo {
+  background: #6366f1;
+}
+
+.bar-fill.violet {
+  background: #8b5cf6;
+}
+
+.diff-text {
+  margin: 6px 0 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.insights-box {
+  margin-top: 14px;
+}
+
+.insights-box ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.insights-box li {
+  border-left: 3px solid #6366f1;
+  border-radius: 8px;
+  background: #eef2ff;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  color: #334155;
+}
+
+.designer-block {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 26px;
+}
+
+.designer-block p {
+  margin: 0;
+  color: #a8b1bf;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+}
+
+.designer-block span {
+  color: #c4c9d3;
+  font-size: 44px;
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .compare-hero h1 {
+    font-size: 52px;
+  }
+
+  .selectors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vs-badge {
+    margin: 0 auto;
+  }
+
+  .result-top {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .compare-main {
+    padding: 24px 12px 30px;
+  }
+
+  .compare-hero h1 {
+    font-size: 40px;
+  }
+
+  .compare-hero p {
+    font-size: 16px;
+  }
+
+  .compare-card,
+  .compare-results {
+    padding: 16px;
+  }
+
+  .designer-block span {
+    font-size: 32px;
+  }
+}
