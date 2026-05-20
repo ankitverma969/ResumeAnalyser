@@ -34,7 +34,7 @@ const options = {
     },
   },
 
-  // THIS FIXES "No operations defined in spec"
+  // 🔥 THIS FIXES "No operations defined in spec"
   apis: [
     'src/routes/*.js',        // main route files
     'src/controllers/*.js',   // optional (if you add docs there later)
